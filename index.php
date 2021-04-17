@@ -1,8 +1,6 @@
 <?php
 if (isset($_REQUEST['a'])) {
 //if ($_REQUEST) {
-
-
     $a = (float)$_REQUEST['a'];
     $b = (float)$_REQUEST['b'];
     $op = $_REQUEST['op'];
@@ -22,19 +20,19 @@ if (isset($_REQUEST['a'])) {
 //    }
     switch ($op) {
         case '+':
-            $result = $a + $b;
+            $result2 = $a + $b;
             break;
         case '-':
-            $result = $a - $b;
+            $result2 = $a - $b;
             break;
         case '*':
-            $result = $a * $b;
+            $result2 = $a * $b;
             break;
         case '/':
             if ($b != 0) {
-                $result = $a / $b;
+                $result2 = $a / $b;
             } else {
-                $result = "Error";
+                $result2 = "Error";
             }
             break;
     }
@@ -63,10 +61,9 @@ if (isset($_REQUEST['a'])) {
     <input type="submit" name="op" value="*">
     <input type="submit" name="op" value="/">
 </form>
-<br>
 <?php
-if (isset($result))
-    echo "$a $op $b = $result";
+if (isset($result2))
+    echo "$a $op $b = $result2";
 
 ?>
 
